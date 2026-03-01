@@ -1,252 +1,176 @@
-🚀 Smart Email GenAI Assistant
+# Smart Email GenAI Assistant
 
-Smart Email GenAI Assistant is a full-stack AI-powered email automation system that converts multi-step email drafting into a single intelligent action. It enables professionals to generate context-aware replies instantly, reducing manual effort and accelerating communication workflows.
+An AI-powered email automation system that turns multi-step email drafting into a single intelligent action. Built with Java, Spring Boot, and the Google Gemini API — available as a Chrome Extension, Web App, and standalone backend service.
 
-Available as:
+---
 
-✅ Chrome Extension (Gmail integration)
+## The Problem
 
-✅ Web Application
+Writing professional email replies is repetitive and time-consuming. Every response involves reading the email, identifying key points, drafting a reply, adjusting tone, checking grammar, and formatting — all before you hit send. Multiply that by dozens of emails a day and you're spending hours on communication alone.
 
-✅ Spring Boot AI Backend
+## The Solution
 
-✨ Features
+Smart Email GenAI collapses that entire workflow into one click. Paste or inject an email, choose a tone, and get a polished, context-aware reply in seconds — directly inside Gmail or via the web interface.
 
-One-click AI email reply generation
+---
 
-Context-aware professional responses
+## What's Inside
 
-Gmail compose & reply integration
-
-Tone-based email generation
-
-Real-time AI response using Gemini API
-
-Productivity-focused workflow automation
-🧠 Technology Stack & Skills
-⚙️ Backend Development
-
-Java 23
-
-Spring Boot
-
-Spring Web MVC
-
-Spring WebFlux (Reactive WebClient)
-
-REST API Design & Development
-
-Dependency Injection (IoC)
-
-Environment Configuration & Secure API Handling
-
-JSON Processing (Jackson)
-
-Maven Build System
-
-🤖 AI & API Integration
-
-Google Gemini API
-
-Generative AI Integration
-
-Prompt Engineering
-
-AI Response Parsing & Processing
-
-Context-aware Content Generation
-
-HTTP Client Architecture (Reactive APIs)
-
-🌐 Frontend Development
-
-HTML5
-
-CSS3
-
-Vanilla JavaScript (ES6+)
-
-DOM Manipulation
-
-Async Programming (Fetch API / Promises)
-
-UI Interaction Design
-
-🧩 Chrome Extension Development
-
-Chrome Extension (Manifest V3)
-
-Content Scripts
-
-Gmail DOM Injection
-
-Dynamic UI Component Injection
-
-Browser Permissions & Host Permissions
-
-Event-driven scripting
-
-Gmail Compose & Reply Automation
-
-🏗️ Full-Stack Architecture
-
-Client–Server Architecture
-
-Extension → Backend → AI Flow
-
-API Communication Pipeline
-
-Modular Project Structure
-
-Separation of Concerns
-
-🔐 DevOps & Configuration
-
-Environment Variables Management
-
-Secure API Key Handling
-
-Git Version Control
-
-GitHub Repository Management
-
-Multi-module Project Organization
-
-🛠️ Development Tools
-
-IntelliJ IDEA
-
-Git Bash
-
-Maven
-
-Chrome Developer Tools
-
-Postman (API Testing)
-
-📐 Software Engineering Concepts
-
-RESTful Architecture
-
-Asynchronous Processing
-
-Reactive Programming Basics
-
-Error Handling & Debugging
-
-Production-style Code Structuring
-
-🚀 Core Capabilities Demonstrated
-
-Full-stack application development
-
-AI-powered workflow automation
-
-Gmail platform integration
-
-Real-world productivity tooling
-
-Backend–AI system orchestration
-
-Extension-based product engineering
-
-🏗️ Project Architecture
+```
 smart-email-genai/
-│
-├── Backend/        → Spring Boot API (AI generation service)
-├── Frontend/       → Web application UI
-├── Extension/      → Chrome Extension (Gmail integration)
+├── Backend/        Spring Boot REST API — handles AI generation logic
+├── Frontend/       Standalone web interface
+├── Extension/      Chrome Extension with native Gmail integration
 └── README.md
-⚙️ Tech Stack
+```
 
-Backend
+---
 
-Java 23
+## Tech Stack
 
-Spring Boot
+**Backend**
+- Java 23
+- Spring Boot
+- Spring WebFlux (Reactive WebClient)
+- Google Gemini API
+- Jackson (JSON processing)
+- Maven
 
-WebClient (Reactive API)
+**Frontend**
+- HTML5, CSS3, Vanilla JavaScript (ES6+)
+- Fetch API / Async-Await
+- DOM Manipulation
 
-Gemini AI API
+**Chrome Extension**
+- Manifest V3
+- Content Scripts
+- Gmail DOM Injection
+- Event-driven scripting
 
-Frontend
+---
 
-HTML / CSS / JavaScript
+## Features
 
-Extension
+- One-click AI reply generation from any email content
+- Tone selection — professional, casual, assertive, empathetic
+- Gmail compose and reply button injection via Chrome Extension
+- Reactive backend with non-blocking API calls to Gemini
+- Secure API key handling via environment variables
+- Modular architecture — use any layer independently
 
-Chrome Extension (Manifest V3)
+---
 
-Gmail DOM Integration
+## Getting Started
 
-🔑 Environment Setup
+### Prerequisites
 
-Create environment variable:
+- Java 23+
+- Maven 3.8+
+- A valid [Google Gemini API Key](https://makersuite.google.com/app/apikey)
+- Google Chrome (for the extension)
 
-Windows (PowerShell)
-setx GEMINI_API_KEY "YOUR_API_KEY"
-Linux / Mac
-export GEMINI_API_KEY=YOUR_API_KEY
-▶️ Run Backend
+### 1. Set Your API Key
+
+**Windows (PowerShell)**
+```powershell
+setx GEMINI_API_KEY "your_api_key_here"
+```
+
+**macOS / Linux**
+```bash
+export GEMINI_API_KEY=your_api_key_here
+```
+
+Restart your terminal after setting the variable.
+
+### 2. Run the Backend
+
+```bash
 cd Backend
 mvn spring-boot:run
+```
 
-Server runs at:
+Server starts at `http://localhost:8080`
 
-http://localhost:8080
-🧩 Load Chrome Extension
+### 3. Load the Chrome Extension
 
-Open Chrome
+1. Open Chrome and go to `chrome://extensions`
+2. Enable **Developer Mode** (top right toggle)
+3. Click **Load Unpacked**
+4. Select the `/Extension` folder from this repo
+5. Open Gmail — you'll see the AI reply button injected into compose and reply windows
 
-Go to chrome://extensions
+### 4. Open the Web App (Optional)
 
-Enable Developer Mode
+Open `Frontend/index.html` directly in your browser. No build step required.
 
-Click Load Unpacked
+---
 
-Select /Extension folder
+## API Reference
 
-📡 API Endpoint
+### Generate Email Reply
+
+```
 POST /api/email/generate
+Content-Type: application/json
+```
 
-Request:
-
+**Request**
+```json
 {
-  "emailContent": "email text",
+  "emailContent": "Hi, I wanted to follow up on the proposal we discussed last week...",
   "tone": "professional"
 }
-🎯 Use Case
+```
 
-Designed for:
+**Response**
+```json
+{
+  "reply": "Thank you for following up. I've reviewed the proposal and have a few thoughts I'd like to share..."
+}
+```
 
-Developers
+**Supported tone values:** `professional`, `casual`, `formal`, `empathetic`, `assertive`
 
-Executives
+---
 
-Fast decision-makers
+## How It Works
 
-High-volume email workflows
+1. The user provides an email body and selects a tone
+2. The backend constructs a structured prompt using that context
+3. The prompt is sent to Google Gemini via reactive WebClient
+4. Gemini returns a generated reply
+5. The backend parses and returns the clean response
+6. The Extension or Web UI displays it — ready to copy or send
 
-Acts as a second brain for instant communication.
+---
 
-🔒 Security Note
+## Security
 
-API keys are stored using environment variables and are never committed to source control.
+- API keys are loaded from environment variables at runtime
+- No keys are stored in code or committed to source control
+- `.gitignore` is configured to exclude any local config files
 
-👨‍💻 Author
+---
 
-Nakul Dubey
-Java Backend Developer
+## Roadmap
 
-GitHub: https://github.com/nakuldubeydev
+- [ ] Streaming AI responses (real-time typing effect)
+- [ ] Multi-tone generation (show 3 reply options at once)
+- [ ] Email summarization mode
+- [ ] Docker support
+- [ ] Cloud deployment (Railway / Render / GCP)
+- [ ] Firefox extension support
 
-⭐ Future Improvements
+---
 
-Streaming AI responses
+## Author
 
-Multi-tone generation
+**Nakul Dubey** — Java Backend Developer  
+[github.com/nakuldubeydev](https://github.com/nakuldubeydev)
 
-Email summarization
+---
 
-Deployment (Docker + Cloud)
+## License
 
+This project is open source and available under the [MIT License](LICENSE).
