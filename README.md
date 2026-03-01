@@ -59,13 +59,6 @@ smart-email-genai/
 - Modular architecture — use any layer independently
 
 ---
-## Screenshots
-
-### ✦ AI Reply Button — Injected into Gmail Compose
-The extension automatically injects an **AI Reply** button inside Gmail's 
-compose and reply window. No copy-pasting, no switching tabs.
-
-![Gmail AI Reply Button](assets/gmail-ai-reply.png)
 
 ## Getting Started
 
