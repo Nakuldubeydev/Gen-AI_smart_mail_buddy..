@@ -23,6 +23,132 @@ Tone-based email generation
 Real-time AI response using Gemini API
 
 Productivity-focused workflow automation
+🧠 Technology Stack & Skills
+⚙️ Backend Development
+
+Java 23
+
+Spring Boot
+
+Spring Web MVC
+
+Spring WebFlux (Reactive WebClient)
+
+REST API Design & Development
+
+Dependency Injection (IoC)
+
+Environment Configuration & Secure API Handling
+
+JSON Processing (Jackson)
+
+Maven Build System
+
+🤖 AI & API Integration
+
+Google Gemini API
+
+Generative AI Integration
+
+Prompt Engineering
+
+AI Response Parsing & Processing
+
+Context-aware Content Generation
+
+HTTP Client Architecture (Reactive APIs)
+
+🌐 Frontend Development
+
+HTML5
+
+CSS3
+
+Vanilla JavaScript (ES6+)
+
+DOM Manipulation
+
+Async Programming (Fetch API / Promises)
+
+UI Interaction Design
+
+🧩 Chrome Extension Development
+
+Chrome Extension (Manifest V3)
+
+Content Scripts
+
+Gmail DOM Injection
+
+Dynamic UI Component Injection
+
+Browser Permissions & Host Permissions
+
+Event-driven scripting
+
+Gmail Compose & Reply Automation
+
+🏗️ Full-Stack Architecture
+
+Client–Server Architecture
+
+Extension → Backend → AI Flow
+
+API Communication Pipeline
+
+Modular Project Structure
+
+Separation of Concerns
+
+🔐 DevOps & Configuration
+
+Environment Variables Management
+
+Secure API Key Handling
+
+Git Version Control
+
+GitHub Repository Management
+
+Multi-module Project Organization
+
+🛠️ Development Tools
+
+IntelliJ IDEA
+
+Git Bash
+
+Maven
+
+Chrome Developer Tools
+
+Postman (API Testing)
+
+📐 Software Engineering Concepts
+
+RESTful Architecture
+
+Asynchronous Processing
+
+Reactive Programming Basics
+
+Error Handling & Debugging
+
+Production-style Code Structuring
+
+🚀 Core Capabilities Demonstrated
+
+Full-stack application development
+
+AI-powered workflow automation
+
+Gmail platform integration
+
+Real-world productivity tooling
+
+Backend–AI system orchestration
+
+Extension-based product engineering
 
 🏗️ Project Architecture
 smart-email-genai/
