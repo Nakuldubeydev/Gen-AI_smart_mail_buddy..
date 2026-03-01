@@ -124,9 +124,3 @@ Email summarization
 
 Deployment (Docker + Cloud)
 
-If you want, next I can also give you:
-
-✅ Professional repo badges (industry style)
-✅ GitHub portfolio-level README (FAANG style)
-✅ Architecture diagram section
-✅ Deployment section (Render / Railway / AWS)
